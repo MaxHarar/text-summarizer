@@ -21,7 +21,7 @@ input_text = st.text_area(label="Enter full text:", value="", height=250)
 
 
 ##change
-# "Submit" button to generate summary at the selected knowledge level
+# "Submit" button  generate summary at the selected knowledge level
 if st.button(
     "Submit",
     on_click=summarize,
