@@ -3,8 +3,15 @@ import openai
 import os
 from text_summarizer.functions import summarize
 
-# Set your OpenAI API key
-openai.api_key = os.getenv('OPENAI_KEY')
+from dotenv import load_dotenv
+load_dotenv()
+
+
+openai.api_type = "azure"
+openai.api_version = "2023-05-15"
+openai.api_base = os.getenv("ENDPOINT")  # Your Azure OpenAI resource's endpoint value.
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
 
 if "summary" not in st.session_state:
     st.session_state["summary"] = ""
