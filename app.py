@@ -4,7 +4,7 @@ import os
 from text_summarizer.functions import summarize
 
 # Set your OpenAI API key
-openai.api_key = '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'
+openai.api_key = ''
 if "summary" not in st.session_state:
     st.session_state["summary"] = ""
 if "compared_summary" not in st.session_state:
