@@ -32,18 +32,17 @@ pip install streamlit "openai<1.0" python-dotenv tiktoken
 
 The code uses the legacy `openai.ChatCompletion` API, so it needs an openai version below 1.0.
 
-For the Azure-configured demo (`dynLang.py`), create a `.env` file:
+Copy the example env file and fill in your key (both entry points read from it):
 
-```
-OPENAI_API_KEY=your-azure-openai-key
-ENDPOINT=https://your-resource.openai.azure.com/
+```bash
+cp .env.example .env
 ```
 
 Then:
 
 ```bash
-streamlit run dynLang.py   # Advil demo, config from .env
-streamlit run app.py       # free-text input (set your API key in app.py)
+streamlit run dynLang.py   # Advil demo, Azure OpenAI config from .env
+streamlit run app.py       # free-text input, key from .env
 ```
 
 ## Context
